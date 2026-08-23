@@ -85,4 +85,4 @@ Horizontal worker scaling is exactly what Railway's per-service replicas are bui
 
 *Built by [Bubbles Studio](https://bubbles.studio) — we build AI automation systems for businesses. Need workflows designed, hardened, or migrated? [Get in touch](https://bubbles.studio).*
 
-*More Bubbles templates: [WhatsApp AI Receptionist](https://railway.com/deploy/whatsapp-ai-receptionist) · [Claude Agent SDK Worker](https://railway.com/deploy/claude-agent-sdk-worker) · [Postgres S3 Backup](https://railway.com/deploy/sparkling-creation) · [Webhook Inspector](https://railway.com/deploy/webhook-inspector)*
+*More Bubbles templates: [AI Gateway (LiteLLM × Langfuse)](https://railway.com/deploy/ai-gateway-observability-litellm-langfus) · [WhatsApp AI Receptionist](https://railway.com/deploy/whatsapp-ai-receptionist) · [Claude Agent SDK Worker](https://railway.com/deploy/claude-agent-sdk-worker) · [Postgres S3 Backup](https://railway.com/deploy/sparkling-creation) · [Webhook Inspector](https://railway.com/deploy/webhook-inspector)*
