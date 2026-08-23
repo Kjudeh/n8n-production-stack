@@ -1,6 +1,6 @@
 # Deploy and Host n8n Production Stack (Queue Mode) on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/n8n-production-stack)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/n8n-production-stack-queue-mode)
 
 A **production-grade n8n** in one click: queue mode with a dedicated worker, Redis, Postgres — and the one thing every other n8n template skips: **automated database backups with restore verification already wired in**. Most n8n deployments run fine until the day an upgrade breaks, a workflow floods the executions table, or the database volume dies. This stack is configured for that day in advance.
 
