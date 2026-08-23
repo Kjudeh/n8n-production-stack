@@ -59,6 +59,8 @@ Five services, wired over Railway's private network:
 
 **Why queue mode instead of a plain n8n?** A single instance executes workflows in the same process that serves the UI and webhooks: one heavy execution and your editor lags, webhooks time out, and data is lost. In queue mode the main instance enqueues jobs to Redis and workers execute them — the recommended n8n production architecture.
 
+**Why does pg-backup show "crashed" right after deploying?** That's expected until you add the S3 variables — it logs `Required variable S3_ENDPOINT is not set` and waits. The moment you set the four S3 variables it redeploys and starts backing up. n8n itself is fully functional either way.
+
 **How do I restore a backup?** Backups are standard compressed `pg_dump` files in your bucket. Restore instructions (and an optional automated restore-verification service that continuously proves your backups work) are in the [backup project's README](https://github.com/Kjudeh/railway-postgres-backups) — or deploy its [standalone template](https://railway.com/deploy/sparkling-creation) alongside for scheduled restore drills.
 
 **What does it cost?** Typically **$15–25/mo** on Railway for the 5 always-on services at light-to-moderate load, scaling with usage. Compare n8n Cloud's Pro tier (€50+/mo with execution caps) — self-hosting has no execution limits.
