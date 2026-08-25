@@ -1,6 +1,6 @@
 # Deploy and Host n8n Production Stack (Queue Mode) on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/n8n-production-stack-queue-mode)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/n8n-production-stack-queue-mode?referralCode=qxxcuG)
 
 A **production-grade n8n** in one click: queue mode with a dedicated worker, Redis, Postgres — and the one thing every other n8n template skips: **automated database backups with restore verification already wired in**. Most n8n deployments run fine until the day an upgrade breaks, a workflow floods the executions table, or the database volume dies. This stack is configured for that day in advance.
 
@@ -61,7 +61,7 @@ Five services, wired over Railway's private network:
 
 **Why does pg-backup show "crashed" right after deploying?** That's expected until you add the S3 variables — it logs `Required variable S3_ENDPOINT is not set` and waits. The moment you set the four S3 variables it redeploys and starts backing up. n8n itself is fully functional either way.
 
-**How do I restore a backup?** Backups are standard compressed `pg_dump` files in your bucket. Restore instructions (and an optional automated restore-verification service that continuously proves your backups work) are in the [backup project's README](https://github.com/Kjudeh/railway-postgres-backups) — or deploy its [standalone template](https://railway.com/deploy/sparkling-creation) alongside for scheduled restore drills.
+**How do I restore a backup?** Backups are standard compressed `pg_dump` files in your bucket. Restore instructions (and an optional automated restore-verification service that continuously proves your backups work) are in the [backup project's README](https://github.com/Kjudeh/railway-postgres-backups) — or deploy its [standalone template](https://railway.com/deploy/sparkling-creation?referralCode=qxxcuG) alongside for scheduled restore drills.
 
 **What does it cost?** Typically **$15–25/mo** on Railway for the 5 always-on services at light-to-moderate load, scaling with usage. Compare n8n Cloud's Pro tier (€50+/mo with execution caps) — self-hosting has no execution limits.
 
@@ -85,4 +85,4 @@ Horizontal worker scaling is exactly what Railway's per-service replicas are bui
 
 *Built by [Bubbles Studio](https://bubbles.studio) — we build AI automation systems for businesses. Need workflows designed, hardened, or migrated? [Get in touch](https://bubbles.studio).*
 
-*More Bubbles templates: [AI Gateway (LiteLLM × Langfuse)](https://railway.com/deploy/ai-gateway-observability-litellm-langfus) · [WhatsApp AI Receptionist](https://railway.com/deploy/whatsapp-ai-receptionist) · [Claude Agent SDK Worker](https://railway.com/deploy/claude-agent-sdk-worker) · [Postgres S3 Backup](https://railway.com/deploy/sparkling-creation) · [Webhook Inspector](https://railway.com/deploy/webhook-inspector)*
+*More Bubbles templates: [AI Gateway (LiteLLM × Langfuse)](https://railway.com/deploy/ai-gateway-observability-litellm-langfus?referralCode=qxxcuG) · [WhatsApp AI Receptionist](https://railway.com/deploy/whatsapp-ai-receptionist?referralCode=qxxcuG) · [Claude Agent SDK Worker](https://railway.com/deploy/claude-agent-sdk-worker?referralCode=qxxcuG) · [Postgres S3 Backup](https://railway.com/deploy/sparkling-creation?referralCode=qxxcuG) · [Webhook Inspector](https://railway.com/deploy/webhook-inspector?referralCode=qxxcuG)*
